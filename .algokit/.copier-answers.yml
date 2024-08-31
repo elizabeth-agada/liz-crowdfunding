@@ -1,0 +1,9 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 2.0.11
+_src_path: gh:algorandfoundation/algokit-fullstack-template
+author_email: elizadave6@gmail.com
+author_name: elizabeth-agada
+contract_name: HelloUser
+preset_name: starter
+project_name: liz-crowdfunding
+
