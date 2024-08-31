@@ -1,57 +1,55 @@
 import { Contract } from '@algorandfoundation/tealscript';
 
-export class HelloUser extends Contract {
-  /**
-   * Calculates the sum of two numbers
-   *
-   * @param a
-   * @param b
-   * @returns The sum of a and b
-   */
-  private getSum(a: uint64, b: uint64): uint64 {
-    return a + b;
+export class CrowdFund extends Contract {
+  beneficiary = GlobalStateKey<Address>();
+
+  targetAmount = GlobalStateKey<uint64>();
+
+  currentAmount = GlobalStateKey<uint64>();
+
+  crowdFundOngoing = GlobalStateKey<boolean>();
+
+  createApplication(targetAmount: uint64, beneficiary: Address): void {
+    this.targetAmount.value = targetAmount;
+    this.beneficiary.value = beneficiary;
+    this.crowdFundOngoing.value = true;
   }
 
-  /**
-   * Calculates the difference between two numbers
-   *
-   * @param a
-   * @param b
-   * @returns The difference between a and b.
-   */
-  private getDifference(a: uint64, b: uint64): uint64 {
-    return a >= b ? a - b : b - a;
+  payIntoCrowdFund(paymentTxn: PayTxn): void {
+    assert(this.crowdFundOngoing.value, 'The crowd fund has to be going');
+    assert(paymentTxn.receiver === this.app.address, 'The receiver has to be the smart contract Address');
+    assert(paymentTxn.amount > 0, 'The amount has to be greater than 0');
+    assert(paymentTxn.sender === this.txn.sender, 'The sender has to be the same as the');
+
+    this.currentAmount.value = this.currentAmount.value + paymentTxn.amount;
+
+    if (this.currentAmount.value >= this.targetAmount.value) {
+      this.crowdFundOngoing.value = false;
+
+      sendPayment({
+        amount: this.app.address.balance,
+        receiver: this.beneficiary.value,
+      });
+    }
   }
 
-  /**
-   * A method that takes two numbers and does either addition or subtraction
-   *
-   * @param a The first uint64
-   * @param b The second uint64
-   * @param operation The operation to perform. Can be either 'sum' or 'difference'
-   *
-   * @returns The result of the operation
-   */
-  doMath(a: uint64, b: uint64, operation: string): uint64 {
-    let result: uint64;
+  triggerWithdrawal(): void {
+    assert(this.txn.sender === this.app.creator, 'only the contract creator can trigger the withdrawal');
+    assert(this.crowdFundOngoing.value, 'The crowd fund has to be ongoing');
 
-    if (operation === 'sum') {
-      result = this.getSum(a, b);
-    } else if (operation === 'difference') {
-      result = this.getDifference(a, b);
-    } else throw Error('Invalid operation');
-
-    return result;
+    this.terminateContract();
   }
 
-  /**
-   * A demonstration method used in the AlgoKit fullstack template.
-   * Greets the user by name.
-   *
-   * @param name The name of the user to greet.
-   * @returns A greeting message to the user.
-   */
-  hello(name: string): string {
-    return 'Hello, ' + name;
+  private terminateContract(): void {
+    this.crowdFundOngoing.value = false;
+
+    sendPayment({
+      amount: this.app.address.balance,
+      receiver: this.beneficiary.value,
+    });
+  }
+
+  viewTargetAmount9(): Address {
+    return this.beneficiary.value;
   }
 }

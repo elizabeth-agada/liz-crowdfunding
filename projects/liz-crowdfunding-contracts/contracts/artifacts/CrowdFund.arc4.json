@@ -1,0 +1,48 @@
+{
+  "name": "CrowdFund",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "args": [
+        {
+          "name": "targetAmount",
+          "type": "uint64"
+        },
+        {
+          "name": "beneficiary",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "payIntoCrowdFund",
+      "args": [
+        {
+          "name": "paymentTxn",
+          "type": "pay"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "triggerWithdrawal",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "viewTargetAmount9",
+      "args": [],
+      "returns": {
+        "type": "address"
+      }
+    }
+  ]
+}

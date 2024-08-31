@@ -1,0 +1,103 @@
+{
+  "hints": {
+    "doMath(uint64,uint64,string)uint64": {
+      "call_config": {
+        "no_op": "CALL"
+      }
+    },
+    "hello(string)string": {
+      "call_config": {
+        "no_op": "CALL"
+      }
+    },
+    "createApplication()void": {
+      "call_config": {
+        "no_op": "CREATE"
+      }
+    }
+  },
+  "bare_call_config": {
+    "no_op": "NEVER",
+    "opt_in": "NEVER",
+    "close_out": "NEVER",
+    "update_application": "NEVER",
+    "delete_application": "NEVER"
+  },
+  "schema": {
+    "local": {
+      "declared": {},
+      "reserved": {}
+    },
+    "global": {
+      "declared": {},
+      "reserved": {}
+    }
+  },
+  "state": {
+    "global": {
+      "num_byte_slices": 0,
+      "num_uints": 0
+    },
+    "local": {
+      "num_byte_slices": 0,
+      "num_uints": 0
+    }
+  },
+  "source": {
+    "approval": "I3ByYWdtYSB2ZXJzaW9uIDEwCgovLyBUaGlzIFRFQUwgd2FzIGdlbmVyYXRlZCBieSBURUFMU2NyaXB0IHYwLjEwMC4yCi8vIGh0dHBzOi8vZ2l0aHViLmNvbS9hbGdvcmFuZGZvdW5kYXRpb24vVEVBTFNjcmlwdAoKLy8gVGhpcyBjb250cmFjdCBpcyBjb21wbGlhbnQgd2l0aCBhbmQvb3IgaW1wbGVtZW50cyB0aGUgZm9sbG93aW5nIEFSQ3M6IFsgQVJDNCBdCgovLyBUaGUgZm9sbG93aW5nIHRlbiBsaW5lcyBvZiBURUFMIGhhbmRsZSBpbml0aWFsIHByb2dyYW0gZmxvdwovLyBUaGlzIHBhdHRlcm4gaXMgdXNlZCB0byBtYWtlIGl0IGVhc3kgZm9yIGFueW9uZSB0byBwYXJzZSB0aGUgc3RhcnQgb2YgdGhlIHByb2dyYW0gYW5kIGRldGVybWluZSBpZiBhIHNwZWNpZmljIGFjdGlvbiBpcyBhbGxvd2VkCi8vIEhlcmUsIGFjdGlvbiByZWZlcnMgdG8gdGhlIE9uQ29tcGxldGUgaW4gY29tYmluYXRpb24gd2l0aCB3aGV0aGVyIHRoZSBhcHAgaXMgYmVpbmcgY3JlYXRlZCBvciBjYWxsZWQKLy8gRXZlcnkgcG9zc2libGUgYWN0aW9uIGZvciB0aGlzIGNvbnRyYWN0IGlzIHJlcHJlc2VudGVkIGluIHRoZSBzd2l0Y2ggc3RhdGVtZW50Ci8vIElmIHRoZSBhY3Rpb24gaXMgbm90IGltcGxlbWVudGVkIGluIHRoZSBjb250cmFjdCwgaXRzIHJlc3BlY3RpdmUgYnJhbmNoIHdpbGwgYmUgIipOT1RfSU1QTEVNRU5URUQiIHdoaWNoIGp1c3QgY29udGFpbnMgImVyciIKdHhuIEFwcGxpY2F0aW9uSUQKIQppbnQgNgoqCnR4biBPbkNvbXBsZXRpb24KKwpzd2l0Y2ggKmNhbGxfTm9PcCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKmNyZWF0ZV9Ob09wICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRAoKKk5PVF9JTVBMRU1FTlRFRDoKCS8vIFRoZSByZXF1ZXN0ZWQgYWN0aW9uIGlzIG5vdCBpbXBsZW1lbnRlZCBpbiB0aGlzIGNvbnRyYWN0LiBBcmUgeW91IHVzaW5nIHRoZSBjb3JyZWN0IE9uQ29tcGxldGU/IERpZCB5b3Ugc2V0IHlvdXIgYXBwIElEPwoJZXJyCgovLyBnZXRTdW0oYTogdWludDY0LCBiOiB1aW50NjQpOiB1aW50NjQKLy8KLy8gQ2FsY3VsYXRlcyB0aGUgc3VtIG9mIHR3byBudW1iZXJzCi8vCi8vIEBwYXJhbSBhCi8vIEBwYXJhbSBiCi8vIEByZXR1cm5zIFRoZSBzdW0gb2YgYSBhbmQgYgpnZXRTdW06Cglwcm90byAyIDEKCgkvLyBjb250cmFjdHMvSGVsbG9Vc2VyLmFsZ28udHM6MTIKCS8vIHJldHVybiBhICsgYjsKCWZyYW1lX2RpZyAtMSAvLyBhOiB1aW50NjQKCWZyYW1lX2RpZyAtMiAvLyBiOiB1aW50NjQKCSsKCXJldHN1YgoKLy8gZ2V0RGlmZmVyZW5jZShhOiB1aW50NjQsIGI6IHVpbnQ2NCk6IHVpbnQ2NAovLwovLyBDYWxjdWxhdGVzIHRoZSBkaWZmZXJlbmNlIGJldHdlZW4gdHdvIG51bWJlcnMKLy8KLy8gQHBhcmFtIGEKLy8gQHBhcmFtIGIKLy8gQHJldHVybnMgVGhlIGRpZmZlcmVuY2UgYmV0d2VlbiBhIGFuZCBiLgpnZXREaWZmZXJlbmNlOgoJcHJvdG8gMiAxCgoJLy8gY29udHJhY3RzL0hlbGxvVXNlci5hbGdvLnRzOjIzCgkvLyByZXR1cm4gYSA+PSBiID8gYSAtIGIgOiBiIC0gYTsKCWZyYW1lX2RpZyAtMSAvLyBhOiB1aW50NjQKCWZyYW1lX2RpZyAtMiAvLyBiOiB1aW50NjQKCT49CglieiAqdGVybmFyeTBfZmFsc2UKCWZyYW1lX2RpZyAtMSAvLyBhOiB1aW50NjQKCWZyYW1lX2RpZyAtMiAvLyBiOiB1aW50NjQKCS0KCWIgKnRlcm5hcnkwX2VuZAoKKnRlcm5hcnkwX2ZhbHNlOgoJZnJhbWVfZGlnIC0yIC8vIGI6IHVpbnQ2NAoJZnJhbWVfZGlnIC0xIC8vIGE6IHVpbnQ2NAoJLQoKKnRlcm5hcnkwX2VuZDoKCXJldHN1YgoKLy8gZG9NYXRoKHVpbnQ2NCx1aW50NjQsc3RyaW5nKXVpbnQ2NAoqYWJpX3JvdXRlX2RvTWF0aDoKCS8vIFRoZSBBQkkgcmV0dXJuIHByZWZpeAoJYnl0ZSAweDE1MWY3Yzc1CgoJLy8gb3BlcmF0aW9uOiBzdHJpbmcKCXR4bmEgQXBwbGljYXRpb25BcmdzIDMKCWV4dHJhY3QgMiAwCgoJLy8gYjogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAyCglidG9pCgoJLy8gYTogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAxCglidG9pCgoJLy8gZXhlY3V0ZSBkb01hdGgodWludDY0LHVpbnQ2NCxzdHJpbmcpdWludDY0CgljYWxsc3ViIGRvTWF0aAoJaXRvYgoJY29uY2F0Cglsb2cKCWludCAxCglyZXR1cm4KCi8vIGRvTWF0aChhOiB1aW50NjQsIGI6IHVpbnQ2NCwgb3BlcmF0aW9uOiBzdHJpbmcpOiB1aW50NjQKLy8KLy8gQSBtZXRob2QgdGhhdCB0YWtlcyB0d28gbnVtYmVycyBhbmQgZG9lcyBlaXRoZXIgYWRkaXRpb24gb3Igc3VidHJhY3Rpb24KLy8KLy8gQHBhcmFtIGEgVGhlIGZpcnN0IHVpbnQ2NAovLyBAcGFyYW0gYiBUaGUgc2Vjb25kIHVpbnQ2NAovLyBAcGFyYW0gb3BlcmF0aW9uIFRoZSBvcGVyYXRpb24gdG8gcGVyZm9ybS4gQ2FuIGJlIGVpdGhlciAnc3VtJyBvciAnZGlmZmVyZW5jZScKLy8KLy8gQHJldHVybnMgVGhlIHJlc3VsdCBvZiB0aGUgb3BlcmF0aW9uCmRvTWF0aDoKCXByb3RvIDMgMQoKCS8vIFB1c2ggZW1wdHkgYnl0ZXMgYWZ0ZXIgdGhlIGZyYW1lIHBvaW50ZXIgdG8gcmVzZXJ2ZSBzcGFjZSBmb3IgbG9jYWwgdmFyaWFibGVzCglieXRlIDB4CgoJLy8gKmlmMF9jb25kaXRpb24KCS8vIGNvbnRyYWN0cy9IZWxsb1VzZXIuYWxnby50czozOAoJLy8gb3BlcmF0aW9uID09PSAnc3VtJwoJZnJhbWVfZGlnIC0zIC8vIG9wZXJhdGlvbjogc3RyaW5nCglieXRlIDB4NzM3NTZkIC8vICJzdW0iCgk9PQoJYnogKmlmMF9lbHNlaWYxX2NvbmRpdGlvbgoKCS8vICppZjBfY29uc2VxdWVudAoJLy8gY29udHJhY3RzL0hlbGxvVXNlci5hbGdvLnRzOjM5CgkvLyByZXN1bHQgPSB0aGlzLmdldFN1bShhLCBiKQoJZnJhbWVfZGlnIC0yIC8vIGI6IHVpbnQ2NAoJZnJhbWVfZGlnIC0xIC8vIGE6IHVpbnQ2NAoJY2FsbHN1YiBnZXRTdW0KCWZyYW1lX2J1cnkgMCAvLyByZXN1bHQ6IHVpbnQ2NAoJYiAqaWYwX2VuZAoKKmlmMF9lbHNlaWYxX2NvbmRpdGlvbjoKCS8vIGNvbnRyYWN0cy9IZWxsb1VzZXIuYWxnby50czo0MAoJLy8gb3BlcmF0aW9uID09PSAnZGlmZmVyZW5jZScKCWZyYW1lX2RpZyAtMyAvLyBvcGVyYXRpb246IHN0cmluZwoJYnl0ZSAweDY0Njk2NjY2NjU3MjY1NmU2MzY1IC8vICJkaWZmZXJlbmNlIgoJPT0KCWJ6ICppZjBfZWxzZQoKCS8vICppZjBfZWxzZWlmMV9jb25zZXF1ZW50CgkvLyBjb250cmFjdHMvSGVsbG9Vc2VyLmFsZ28udHM6NDEKCS8vIHJlc3VsdCA9IHRoaXMuZ2V0RGlmZmVyZW5jZShhLCBiKQoJZnJhbWVfZGlnIC0yIC8vIGI6IHVpbnQ2NAoJZnJhbWVfZGlnIC0xIC8vIGE6IHVpbnQ2NAoJY2FsbHN1YiBnZXREaWZmZXJlbmNlCglmcmFtZV9idXJ5IDAgLy8gcmVzdWx0OiB1aW50NjQKCWIgKmlmMF9lbmQKCippZjBfZWxzZToKCS8vIEludmFsaWQgb3BlcmF0aW9uCgllcnIKCippZjBfZW5kOgoJLy8gY29udHJhY3RzL0hlbGxvVXNlci5hbGdvLnRzOjQ0CgkvLyByZXR1cm4gcmVzdWx0OwoJZnJhbWVfZGlnIDAgLy8gcmVzdWx0OiB1aW50NjQKCgkvLyBzZXQgdGhlIHN1YnJvdXRpbmUgcmV0dXJuIHZhbHVlCglmcmFtZV9idXJ5IDAKCXJldHN1YgoKLy8gaGVsbG8oc3RyaW5nKXN0cmluZwoqYWJpX3JvdXRlX2hlbGxvOgoJLy8gVGhlIEFCSSByZXR1cm4gcHJlZml4CglieXRlIDB4MTUxZjdjNzUKCgkvLyBuYW1lOiBzdHJpbmcKCXR4bmEgQXBwbGljYXRpb25BcmdzIDEKCWV4dHJhY3QgMiAwCgoJLy8gZXhlY3V0ZSBoZWxsbyhzdHJpbmcpc3RyaW5nCgljYWxsc3ViIGhlbGxvCglkdXAKCWxlbgoJaXRvYgoJZXh0cmFjdCA2IDIKCXN3YXAKCWNvbmNhdAoJY29uY2F0Cglsb2cKCWludCAxCglyZXR1cm4KCi8vIGhlbGxvKG5hbWU6IHN0cmluZyk6IHN0cmluZwovLwovLyBBIGRlbW9uc3RyYXRpb24gbWV0aG9kIHVzZWQgaW4gdGhlIEFsZ29LaXQgZnVsbHN0YWNrIHRlbXBsYXRlLgovLyBHcmVldHMgdGhlIHVzZXIgYnkgbmFtZS4KLy8KLy8gQHBhcmFtIG5hbWUgVGhlIG5hbWUgb2YgdGhlIHVzZXIgdG8gZ3JlZXQuCi8vIEByZXR1cm5zIEEgZ3JlZXRpbmcgbWVzc2FnZSB0byB0aGUgdXNlci4KaGVsbG86Cglwcm90byAxIDEKCgkvLyBjb250cmFjdHMvSGVsbG9Vc2VyLmFsZ28udHM6NTUKCS8vIHJldHVybiAnSGVsbG8sICcgKyBuYW1lOwoJYnl0ZSAweDQ4NjU2YzZjNmYyYzIwIC8vICJIZWxsbywgIgoJZnJhbWVfZGlnIC0xIC8vIG5hbWU6IHN0cmluZwoJY29uY2F0CglyZXRzdWIKCiphYmlfcm91dGVfY3JlYXRlQXBwbGljYXRpb246CglpbnQgMQoJcmV0dXJuCgoqY3JlYXRlX05vT3A6CgltZXRob2QgImNyZWF0ZUFwcGxpY2F0aW9uKCl2b2lkIgoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMAoJbWF0Y2ggKmFiaV9yb3V0ZV9jcmVhdGVBcHBsaWNhdGlvbgoKCS8vIHRoaXMgY29udHJhY3QgZG9lcyBub3QgaW1wbGVtZW50IHRoZSBnaXZlbiBBQkkgbWV0aG9kIGZvciBjcmVhdGUgTm9PcAoJZXJyCgoqY2FsbF9Ob09wOgoJbWV0aG9kICJkb01hdGgodWludDY0LHVpbnQ2NCxzdHJpbmcpdWludDY0IgoJbWV0aG9kICJoZWxsbyhzdHJpbmcpc3RyaW5nIgoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMAoJbWF0Y2ggKmFiaV9yb3V0ZV9kb01hdGggKmFiaV9yb3V0ZV9oZWxsbwoKCS8vIHRoaXMgY29udHJhY3QgZG9lcyBub3QgaW1wbGVtZW50IHRoZSBnaXZlbiBBQkkgbWV0aG9kIGZvciBjYWxsIE5vT3AKCWVycg==",
+    "clear": "I3ByYWdtYSB2ZXJzaW9uIDEw"
+  },
+  "contract": {
+    "name": "HelloUser",
+    "desc": "",
+    "methods": [
+      {
+        "name": "doMath",
+        "desc": "A method that takes two numbers and does either addition or subtraction",
+        "args": [
+          {
+            "name": "a",
+            "type": "uint64",
+            "desc": "The first uint64"
+          },
+          {
+            "name": "b",
+            "type": "uint64",
+            "desc": "The second uint64"
+          },
+          {
+            "name": "operation",
+            "type": "string",
+            "desc": "The operation to perform. Can be either 'sum' or 'difference'"
+          }
+        ],
+        "returns": {
+          "type": "uint64",
+          "desc": "The result of the operation"
+        }
+      },
+      {
+        "name": "hello",
+        "desc": "A demonstration method used in the AlgoKit fullstack template.\nGreets the user by name.",
+        "args": [
+          {
+            "name": "name",
+            "type": "string",
+            "desc": "The name of the user to greet."
+          }
+        ],
+        "returns": {
+          "type": "string",
+          "desc": "A greeting message to the user."
+        }
+      },
+      {
+        "name": "createApplication",
+        "args": [],
+        "returns": {
+          "type": "void"
+        }
+      }
+    ]
+  }
+}
